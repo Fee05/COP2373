@@ -42,7 +42,7 @@ def run_ticket_sale():
     Parameters: None
     Variables:
         tickets_remaining (int): Tracks inventory, starting at 20.
-        buyer_count (int): Accumulator to track total successful transactions.
+        total_successful_buyers (int): Accumulator to track total successful transactions.
         user_request (int): The integer input provided by the user.
     Logical Steps:
         1. Initialize ticket count and buyer accumulator.
@@ -54,7 +54,7 @@ def run_ticket_sale():
     Return: None
     """
     tickets_remaining = TOTAL_TICKETS_AVAILABLE
-    buyer_count = 0
+    total_successful_buyers = 0
 
     print("--- Welcome to the Cinema Ticket Pre-Sale ---")
 
@@ -71,7 +71,7 @@ def run_ticket_sale():
                 tickets_remaining -= user_request
 
                 # Increment to track the total number of unique buyers
-                buyer_count += 1
+                total_successful_buyers += 1
                 print(f"Purchase successful! {tickets_remaining} tickets left.")
 
         except ValueError:
@@ -80,7 +80,7 @@ def run_ticket_sale():
 
     # Display final results once the loop terminates (all tickets sold)
     print("\n--- All tickets have been sold! ---")
-    print(f"The total number of buyers was: {buyer_count}")
+    print(f"The total number of buyers was: {total_successful_buyers}")
 
 
 if __name__ == "__main__":
