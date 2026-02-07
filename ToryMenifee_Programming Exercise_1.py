@@ -64,7 +64,7 @@ def run_ticket_sale():
             print(f"\nTickets currently available: {tickets_remaining}")
 
             # Get input and convert to integer for calculation
-            user_request = int(input("How many tickets would you like to buy? "))
+            user_request = int(input("Please enter the number of tickets you wish to purchase: "))
 
             # Check if the requested amount meets all business rules
             if validate_purchase(user_request, tickets_remaining):
