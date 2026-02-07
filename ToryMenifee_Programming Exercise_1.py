@@ -1,6 +1,6 @@
 # Constants defined in UPPERCASE per PEP 8 standards
 MAX_TICKETS_PER_BUYER = 4
-TOTAL_TICKETS_AVAILABLE = 20
+TOTAL_TICKETS_AVAILABLE = 10
 
 
 def validate_purchase(requested, remaining):
